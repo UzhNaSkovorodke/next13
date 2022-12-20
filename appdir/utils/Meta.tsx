@@ -1,12 +1,9 @@
 import Head from 'next/head'
 import React from 'react'
 
-type Props = {
-	description?: string
-	title: string
-}
+import { IMeta } from './metainterface'
 
-function Meta({ description, title }: Props) {
+function Meta({ description, title }: IMeta) {
 	return (
 		<>
 			<Head>

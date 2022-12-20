@@ -1,12 +1,21 @@
 import React from 'react'
-import { ReactNode } from 'react'
+import { FC, PropsWithChildren, ReactNode } from 'react'
 
-type Props = {
-	children: ReactNode
-}
+import Meta from '@/utils/Meta'
+import { IMeta } from '@/utils/metainterface'
 
-const Layout = ({ children }: Props) => {
-	return <div>{children}</div>
+import Header from './header/Header'
+
+const Layout: FC<PropsWithChildren<IMeta>> = ({ children, ...meta }) => {
+	return (
+		<>
+			<Meta {...meta} />
+			<div>
+				<Header />
+				<main>{children}</main>
+			</div>
+		</>
+	)
 }
 
 export default Layout
