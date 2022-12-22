@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 
-import { IMeta } from './metainterface'
+import { IMeta } from './meta.interface'
 
 function Meta({ description, title }: IMeta) {
 	return (
