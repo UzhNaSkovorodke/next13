@@ -2,9 +2,9 @@ import { Dispatch, SetStateAction } from 'react'
 
 import { IUser } from '@/shared/interfaces/user.interface'
 
-export type TypeuserState = IUser | null
+export type TypeUserState = IUser | null
 
 export interface IContext {
-	user: TypeuserState
-	setUser: Dispatch<SetStateAction<TypeuserState>>
+	user: TypeUserState
+	setUser: Dispatch<SetStateAction<TypeUserState>>
 }
